@@ -19,19 +19,16 @@ Main changes:
 - blog posts comments with https://disqus.com/ 
 
 
-Also I *would* **like** `to test` ```some features``` _*of markdown*_ in this post :-)
+Also I *would* **like** `to test` ```some features``` **_of markdown_** in this post :-)
 And image inserting:
 ![](staff/images.duckduckgo.com.jpe)
 *Pretty kitty*
 
 Also pice of code:
-```
-         org 7C00h
- 
-         jmp short Start ;Jump over the data (the 'short' keyword makes the jmp instruction smaller)
- 
- Msg:    db "Hello World! "
- EndMsg:
+```ruby
+require 'redcarpet'
+markdown = Redcarpet.new("Hello World!")
+puts markdown.to_html
 ```
 
 Looks like main funstions works
